@@ -6,8 +6,10 @@ public class PerfectNumbers
         //code to determine whether the parameter value store in number is a perfect number.
         //this code involves a loop
         //returns true or false
-        int sum = 0;
-        for( int i = 0 ; i< number; i++){
+        if (number == 1)
+            return false;
+        int sum = 1;
+        for( int i = 2 ; i< number; i++){
             if(number%i == 0){
                 sum+=i;
             }
@@ -16,9 +18,19 @@ public class PerfectNumbers
     }
     public static void main(String[] args)
     {
-        for(int i =0; )
-        // a loop in the main function that goes through a range of numbers,
-        // checking each one to see if it is a perfect number, and printing it if it is.
-        // until 4 perfect numbers have been displayed.
+        int number = 0;
+        int isFour = 0;
+
+        while(isFour<4) {
+            number++;
+            if (isPerfect(number)) {
+                System.out.print(number + " ,");
+                isFour++;
+            }
+
+            // a loop in the main function that goes through a range of numbers,
+            // checking each one to see if it is a perfect number, and printing it if it is.
+            // until 4 perfect numbers have been displayed.
+        }
     }
 }
