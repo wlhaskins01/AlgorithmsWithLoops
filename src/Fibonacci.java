@@ -1,17 +1,24 @@
 public class Fibonacci
 {
 
-//This method is static because it does not use or depend on on any instance variables.
+//This method is static because it does not use or depend on any instance variables.
 
     public static int fibonacci(int n)
     {
-        int term1 = 0; //assign an initial value here
-        int term2 = 1; //assign an initial value here
-        int sum = 1; //assign an initial value here
+
+
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+
+        //while (count < n)
+
 
         //code to calculate the nth term in the fibonacci sequence
 
-        return sum;
+        //return sum;
     }
     public static void main(String[] args)
     {
